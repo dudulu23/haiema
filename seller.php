@@ -61,23 +61,23 @@ switch ($p) {
 	$shop_row=mysqli_fetch_array($shop_result);
 	if($shop_row['open']==0){
 		$st="休息中";
-		$cbt="<button class='close btn btn-warning'>开店</button>";
+		$cbt="<button class='cbt btn btn-info'>开店</button>";
 	}else{
 		$st="营业中";
-		$cbt="<button class='close btn btn-info'>关店</button>";
+		$cbt="<button class='cbt btn btn-warning'>关店</button>";
 	}
 		echo "
 	
 	
 <div class='seller_body_left col-xs-10 right'>
 	<div class='shop_title'>
-		<img class='col-xs-2' src='img/common/default-avatar.png' alt=''>
+		<img class='col-xs-2' src='img/shop/".$_SESSION['sid'].".png' alt=''>
 		<div class='col-xs-5'>
 			<p>".$shop_row['shopName']."</p>
 			<p>状态:<b>".$st."</b></p>
 		</div>
 		<div class='col-xs-2 right'>
-			<button class='close btn btn-warning'>关店</button>
+			".$cbt."
 		</div>
 		<div class='clearfix'></div>
 	</div>

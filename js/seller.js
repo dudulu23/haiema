@@ -2,21 +2,30 @@ $(document).ready(function(){
 	var timer;
 	Polling();
 	//
-	$('.close').click(function(){
+	$('.cbt').click(function(){
 		if($(this).hasClass('btn-warning')){
-			$.ajax({
-				url:'',
-				type:'post',
-				data:{
-					f:'close'
-				}
-			});
+			if(confirm('真的要关店吗')){
+				$.ajax({
+					url:'controller/shopst.php',
+					type:'post',
+					data:{
+						f:'close'
+					},
+					success:function(data){
+						window.history.go();
+					}
+				});
+			}
+			
 		}else if($(this).hasClass('btn-info')){
 			$.ajax({
-				url:'',
+				url:'controller/shopst.php',
 				type:'post',
 				data:{
 					f:'open'
+				},
+				success:function(data){
+					window.history.go();
 				}
 			});
 		}
