@@ -1,0 +1,148 @@
+.mainBody{
+	width: 1000px;
+	margin: auto;
+}
+.searchBar{
+	margin-top:20px;
+	height:30px;
+	
+}
+.searchBar .position{
+	float:left;
+}
+.searchBar .position>span{
+	color: #aaa;
+	margin-right:10px;
+}
+.searchBar .position a{
+	font-size: 15px;
+	color: #FF6D70;
+}
+.searchBar form{
+	border:1px solid #ddd;
+}
+.searchBar input{
+	border:none;
+}
+
+.searchBar .searchBox{
+	float: right;
+}
+.classify{
+	width: 1000px;
+	padding:10px;
+	box-shadow: 0px -0px 3px #aaa;
+	margin-bottom: 20px;
+	display:inline-block
+}
+.classify span{
+	float:left;
+	margin: 5px 20px;
+	color: #888888;
+
+}
+.classify a{
+	color:#666;
+	font-size: 15px;
+}
+.classify>div{
+	float: left;
+	margin-left: 20px;
+	width:800px;
+}
+.classify>div span{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.classify>div span:hover{background: #eee}
+.shop{
+	width: 1000px;
+	box-shadow: 0px -0px 3px #aaa;
+
+}
+.shopBox{
+	position: relative;
+	width:250px;
+	height:120px;
+	padding:20px;
+	float: left;
+}
+.shopBox .shop_cover{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	top:0;
+	left: 0;
+	background: rgba(5,5,5,0.6);
+	font-size: 30px;
+	color:#aaa;
+	line-height: 130px;
+	text-align: center;
+}
+.shopBox>a{
+	float: left;
+}
+.shopBox:hover{
+	background: #FFE5E5;
+	box-shadow: 1px 1px 4px #FFD4D5 ;
+}
+.shopBox .shopIco{
+	width:70px;
+	float:left;
+}
+.shopBox .shopIco img{
+	height: 70px;
+	width: 70px;
+}
+.shopBox .shopIco span{
+	margin: auto;
+	text-align: center;
+	display:block;
+	font-size: 10px;
+}
+.shophover{
+	display: none;
+	position: absolute;
+	z-index: 2;
+	top:0px;
+	right:-260px;
+	width: 260px;
+	height: 150px;
+	background: #eee;
+}
+.shopBox .shopMsg{
+	float: left;
+	margin-left: 20px;
+	width: 120px;
+}
+.shopMsg span{
+	height: 18px;
+	font-size: 12px;
+	line-height: 18px;
+	vertical-align:top;
+}
+.shopName{
+	font-weight: bold;
+	overflow: hidden;
+	height: 28px;
+	 text-overflow:ellipsis;
+
+	
+}
+.shopStar{
+	display: inline-block;
+	width: 60px;
+	
+}
+.shopSales{
+	display: inline-block;
+	
+}
+.shopFee{
+
+	display: block;
+}
+.serIco{
+	height: 18px;
+}

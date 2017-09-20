@@ -1,0 +1,246 @@
+body{
+	background: #eee;
+}
+.mainbody{
+	width: 1000px;
+	margin:0 auto;
+	margin-top: 50px;
+
+}
+.sidebar{
+	float: left;
+}
+.sidebar div{
+	margin-bottom: 50px;
+}
+.bold{
+	font-weight: bold;
+	color: #444;
+	font-size: 20px;
+}
+.sidebar li{
+	margin-top: 10px;
+}
+.sidebar li a{
+	color: #666;
+	font-size:14px;
+}
+.rightbox{
+	margin-left: 50px;
+	float: left;
+	background: #fff;
+	width: 870px;
+	min-height: 521px;
+}
+.usercenter-body>div{
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 0 2px #ccc;
+	margin-bottom:20px;
+}
+.userimg{
+	height: 80px;
+	width: 80px;
+	border-radius:50%;
+	overflow: hidden;
+	border: 1px solid #aaa;
+}
+._order_title{
+	width: 90%;
+	margin:auto;
+	border-bottom:5px solid #eee;
+	overflow: hidden;
+}
+.o_title{
+	float: left;
+	border-bottom: 2px solid #f77;
+}
+#allorder{
+	float: right;
+	font-size: 12px;
+}
+._order_main{
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
+	min-height: 400px;
+}
+.rightbox_title{
+	width: 90%;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top:15px;
+	border-bottom:2px solid #eee; 
+}
+.rightbox_title span{
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom:4px solid #F67620;
+}
+.rightbox_body{
+	width: 90%;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top:15px;
+	
+
+}
+.add .addbox{
+	border: 1px solid #eee;
+	width: 30%;
+	float: left;
+	padding:10px;
+	margin-right:5px;
+	margin-bottom:5px;
+	height: 100px;
+}
+.addbox:hover{
+	border: 1px solid #F67620;
+}
+.addbox_addadd{
+	display: block;
+	width: 100%;
+	height:100%;
+	text-align: center;
+	line-height: 80px;
+}
+.addbox_name{
+	float: left;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 16px
+}
+.addbox_btn{
+	float: right;
+}
+.addbox_btn a{
+	
+	font-size: 12px;
+}
+.addbox_position,.addbox_phone{
+	display: block;
+}
+.changeps .rightbox_body>div{
+	width: 300px;
+}
+.changeps .rightbox_body>div>input{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.addaddbox{
+	z-index: 4;
+	display: none;
+	position: fixed;
+	width: 500px;
+	background: #fff;
+	left: 0;
+	right: 0;
+	top: 100px;
+	padding: 40px;
+	box-shadow: 1px 1px 2px #888;
+	border-radius: 5px;
+}
+.addaddbox_title{
+	font-weight:bold;
+	font-size: 20px;
+}
+.addaddbox>span{
+	display: block;
+	margin-top:20px;
+	margin-bottom:10px;
+
+}
+.addaddbox button{
+	margin-top: 50px;
+	width: 100px;
+	margin-right:30px;
+}
+
+
+
+ .orderbox:hover{
+	background: #def;
+}
+ .orderbox p{
+	margin:0;
+	font-size: 12px;
+	color:#aaa;
+}
+.time{
+	padding-top: 10px;
+}
+.price,.state{
+	line-height: 60px;
+	white-space:nowrap;
+}
+.op .btn{
+	margin-top: 10px; 
+}
+
+
+.headimg{
+	height: 100px;
+	width: 100px;
+}
+.data .datachange{
+	font-size: 15px;
+	color:#0089dc\;
+}
+.o_detail{
+	top:100px;
+	z-index: 4;
+	position: fixed;
+	width: 800px;
+	box-shadow: 1px 1px 4px #888;
+	background: #fff;
+	border-radius: 6px;
+	padding: 15px;
+	display: none;
+}
+.o_datail_title{
+	font-size: 20px;
+	font-weight: bold;
+	color:#555;
+}
+.o_detail span{
+	margin-bottom: 10px;
+}
+.o_detail button{
+	width: 100px;
+	margin-right:30px;
+}
+.o_datail_title{
+	border-bottom: 2px solid #eee;
+}
+.o_detail b{
+	font-size: 20px;
+	color: #f77;
+}
+.imgupload{
+	background: #fff;
+	padding: 20px;
+	z-index: 4;
+	position: fixed;
+	width: 400px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top:200px;
+	box-shadow: 1px 1px 4px #444;
+	display:none;
+}
+.imgupload .inputfile{
+	border:2px solid #eee;
+	margin-bottom: 15px;
+}
+.comment{
+	margin-bottom:20px;
+}
+.comment textarea{
+	float: left;
+	resize: none;
+}
+.comment ro{
+	float: left;
+}

@@ -1,0 +1,231 @@
+.hidden{
+	display: none;
+}
+.clearfix:after{
+	content:"";
+	display: block;
+	height: 0;
+	clear: both;
+}
+.shopBay{
+	width:100%;
+	min-width: 1000px;
+	height: 150px;
+	background:#EBE9E9;
+}
+.shopBay>div{
+	width:1000px;
+	height: 100%;
+	margin:0 auto;
+}
+.shopBay-left{
+	float: left;
+	height: 100%;
+	width:600px;
+}
+.shopBay-left img{
+	float: left;
+	width: 100px;
+	height: 100px;
+	border: 3px solid #aaa;
+	margin-top: 23px;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	
+	overflow: hidden;
+	margin-right: 20px;
+}	
+.shop-info{
+	margin-top: 45px;
+	float: left;
+}
+.shop-info .shopName{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 25px;
+}
+.shopBay-right{
+	float: right;
+}
+.shopBay-right>span{
+	height: 25px;
+	width: 150px;
+	text-align: center;
+	float: right;
+	margin-top: 30px;
+}
+.shopnav{
+	width: 1000px;
+	height:50px;
+	margin:0 auto;
+}
+.shopnav_left>a{
+	display: inline-block;
+	height: 50px;
+	width: 120px;
+	text-align: center;
+}
+.shopnav_left a span{
+	line-height: 50px;
+	font-weight:bold;
+
+}
+.shopnav .shopnav_left{
+	float: left;
+	width: 800px;
+	height:50px;
+
+}
+.goods_sort>a{
+	margin-right: 20px;
+}
+.goods_sort>a>span{
+	font-size: 15px;
+}
+.shopnav .shopnav_left .goods_sort{
+	float: right;
+}
+.shopnav .goods_search{
+	float: right;
+	width: 200px;
+	height:50px;
+	bottom: 25px;
+}
+.goods_search input{
+	margin-top:13px;
+}
+.goods_search .text{
+	width: 145px;
+}
+.goods_class{
+	width: 1000px;
+	margin:0 auto;
+	font-size: 15px;
+	border:1px solid #eee;
+	margin-bottom: 20px;
+}
+.goods_class div{
+	padding-left: 20px;
+}
+.goods_class a{
+	padding-left: 10px;
+	padding-right: 10px;
+	display:inline-block;
+	font-size: 15px;
+	line-height: 25px;
+	width: 119px;
+	margin-right:20px;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+.goods_class a:hover{
+	background:#ddd;
+} 
+
+.goods{
+	width: 1000px;
+	margin:0 auto;
+}
+.goods .class_name{
+	font-size: 25px;
+	display: block;
+}
+.goods_box{
+	float: left;
+	width: 300px;
+	height: 100px;
+	border:1px solid #eee;
+	margin-right:30px;
+	margin-bottom: 20px;
+	position: relative; 
+}
+.goods_box .goods_img{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+.goods_box .goods_inf{
+	float: left;
+	margin-left:20px;
+	height: 100px;
+}
+.goods_box .goods_inf span{
+	display: block;
+}
+.goods_name{
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.goods_note,.sellnum{
+	font-size: 13px;
+	color:#999;
+}
+.goods_price{
+	margin-top: 5px;
+	color:#e33;
+	font-weight: bold;
+}
+.cart_btn a{
+	font-size: 10px;
+	padding:5px;
+	display: inline-block;
+	background: #FF5353;
+	color: #eee;
+}
+.cart_count,.cart_btn{
+	position: absolute;
+	top:65px;
+	left: 220px;
+}
+.cart_count button{
+	border:1px solid #eee;
+}
+.cart_count .goods_num{
+	border:1px solid #eee;
+	width: 20px;
+	text-align: center;
+}
+.none{
+	display:none;
+}
+.comment_ul{
+	width: 1000px;
+	margin: auto;
+}
+.comment_ul li{
+	border-bottom: 1px solid #eee;
+}
+.comment_ul li:nth-last-child(1){
+	border:none;
+}
+.comment_box{
+	padding: 15px;
+	color: #aaa;
+}
+.comment_text{
+	max-width: 600px;
+	word-break:break-all;
+}
+.user_img{
+	height: 80px;
+	width: 80px;
+	float: left;
+}
+.user_img img{
+	border-radius: 50%;
+	height: 80px;
+	width: 80px;
+}
+.comment_box .comment_main{
+	margin-left: 20px;
+	float: left;
+
+
+
+}
+.comment_box .comment_time{
+	float: right;
+}
