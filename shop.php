@@ -45,7 +45,7 @@ $sellnum=mysqli_num_rows($sellnum_result);
 			if(isset($_SESSION['list'][0])){
 				foreach ($_SESSION['list'] as $list) {
 					echo"
-						<div class='carbox_list' id='list_id_".$list->goods_id."'><input type='hidden'  value='".$list->goods_id."'><input class='CSID' type='hidden'  value='".$list->SID."'><span class='list_name'>".$list->goods_name."</span><span class='list_num'>".$list->goods_num."</span><span class='list_price'>".$list->goods_num*$list->goods_price."元</span><span><button class='list_del' onClick='listdel(this)'>-</button></span></div>
+						<div class='carbox_list' id='list_id_".$list->goods_id."'><input type='hidden'  value='".$list->goods_id."'><input class='CSID' type='hidden'  value='".$list->SID."'><span class='list_name'>".$list->goods_name."</span><span class='list_num'>".$list->goods_num."</span><span class='list_price'>".$list->goods_num*$list->goods_price."元</span></div>
 					";
 				}
 			}
@@ -73,7 +73,10 @@ $sellnum=mysqli_num_rows($sellnum_result);
 		</div>
 		<div class="logIco">
 				<?php
-				echo "<input id='SID' type='hidden' value='".$SID."'><input id='shopfee' type='hidden' value='".$DATA['shopFee']."'>";if (isset($_SESSION['user'])) {
+				echo "<input id='SID' type='hidden' value='".$SID."'>
+				<input id='min_price' type='hidden' value='".$DATA['min_price']."'>
+				<input id='shopfee' type='hidden' value='".$DATA['shopFee']."'>";
+				if (isset($_SESSION['user'])) {
 					echo "<div class='sueee'><div class='slide'>
 					<a href='usercenter.php?position=allorder' title=''><span>我的订单</span></a>
 					<a href='usercenter.php?position=data' title=''><span>我的资料</span></a>

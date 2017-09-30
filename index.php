@@ -37,7 +37,7 @@
 				foreach ($_SESSION['list'] as $list) {
 					$psum=$list->goods_num*$list->goods_price+$psum;
 					echo"
-						<div class='carbox_list' id='list_id_".$list->goods_id."'><input type='hidden'  value='".$list->goods_id."'><span class='list_name'>".$list->goods_name."</span><span class='list_num'>".$list->goods_num."</span><span class='list_price'>".$list->goods_num*$list->goods_price."元</span><span><button class='list_del' onClick='indexlistdel(this)'>-</button></span></div>
+						<div class='carbox_list' id='list_id_".$list->goods_id."'><input type='hidden'  value='".$list->goods_id."'><span class='list_name'>".$list->goods_name."</span><span class='list_num'>".$list->goods_num."</span><span class='list_price'>".$list->goods_num*$list->goods_price."元</span></div>
 					";
 				}
 			}

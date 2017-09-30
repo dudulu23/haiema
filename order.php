@@ -67,6 +67,8 @@
 			
 				foreach ($_SESSION['list'] as $list){
 					$_SESSION['SID']=$list->SID;
+					$shopfee=$list->shopfee;
+					$min_price=$list->min_price;
 					$sum=$sum+$list->goods_num*$list->goods_price;
 				echo "
 			<div class='order_list'>
@@ -117,8 +119,11 @@
 	</div>
 </div>
 <div class='o_submit'>
-	<button class='btn btn-info pull-right'>下单</button>
-	<span class='pull-right'>共计<b><?php echo $sum ?></b>元</span>
+	
+	<button class='OR btn btn-info pull-right'>下单</button>
+	<span class='sum pull-right'>共计<b><?php echo $sum+$shopfee ?></b>元</span>
+	<?php echo"<span class='shopfee'>配送费<b>".$shopfee."</b>元</span>
+	<span class='min_price'><b>".$min_price."</b>元起送</span>"; ?>
 	
 </div>
 <script type="text/javascript" src="js/order.js"></script>

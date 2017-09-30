@@ -70,15 +70,14 @@ $(document).ready(function(){
 
 });
 function listdel(obj){
-
 		var gid = $(obj).parents(".carbox_list").find("input").val();
 		if($("#SID").val()==$(".CSID").val()){
 			var $th=$(".goods_box").each(function(){
 				var $th = $(this); 
 				var boxid=$th.find(".goods_id").val();
 				if(boxid==gid){
-					$th.find(".goods_num").val(0);
 
+					$th.find(".goods_num").val(0);
 					btnchange($th.find(".goods_id"));
 					var package = goods_data($th.find(".goods_id"));
 					listajax(package);
@@ -149,7 +148,7 @@ function indexlistdel(obj){
 			$("#list_id_"+goods_id+" .list_price").text(goods_price*goods_num+"元");
 
 		}else{
-			$(".order_btn").before("<div class='carbox_list' id='list_id_"+goods_id+"'><input class='CSID' type='hidden'  value='"+sid+"'><input type='hidden' value='"+goods_id+"'><span class='list_name'>"+goods_name+"</span><span class='list_num'>"+goods_num+"</span><span class='list_price'>"+goods_price*goods_num+"元</span><span><button class='list_del' onClick='listdel(this)'>-</button></span></div>");
+			$(".order_btn").before("<div class='carbox_list' id='list_id_"+goods_id+"'><input class='CSID' type='hidden'  value='"+sid+"'><input type='hidden' value='"+goods_id+"'><span class='list_name'>"+goods_name+"</span><span class='list_num'>"+goods_num+"</span><span class='list_price'>"+goods_price*goods_num+"元</span></div>");
 		}
 
 	}
@@ -157,8 +156,9 @@ function indexlistdel(obj){
 	function goods_data($th){
 		pa=$th.parents(".goods_box");
 		var package={
-			SID:pa.find('.SID').val(),
-			shopfee:pa.find('.shopfee').val(),
+			SID:$('#SID').val(),
+			shopfee:$('#shopfee').val(),
+			min_price:$('#min_price').val(),
 			goods_id:pa.find('.goods_id').val(),
 			goods_name:pa.find('.goods_name').text(),
 			goods_num:pa.find('.goods_num').val(),
@@ -223,3 +223,4 @@ function indexlistdel(obj){
 				}
 			});			
 		} 
+		

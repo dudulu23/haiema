@@ -116,7 +116,9 @@ ul li{
 	margin:auto;
 }
 .carbox_list .list_name{
-	width: 40%;
+	width: 55%;
+	white-space: nowrap;
+	text-overflow: hidden;
 }
 .carbox_list .list_num{
 	width: 20%;

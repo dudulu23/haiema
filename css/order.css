@@ -82,3 +82,11 @@
  	height: 50px;
  	width: 100px;
  }
+ .shopfee,.min_price{
+	float: right;
+}
+.min_price{
+	margin:10px;
+	color: #aaa;
+	font-size: 15px;
+}

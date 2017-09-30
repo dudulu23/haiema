@@ -81,7 +81,7 @@ $(document).ready(function(){
 		},200);
 		
 	});
-
+	//添加新类别
 	$('.addnewclass .can').click(function(){
 		$(this).parents('.addnewclass').fadeOut();
 		$('.cover').addClass('hidden');
@@ -171,9 +171,13 @@ function sellerajax(){
 		},
 		url:'controller/sellerpolling.php',
 		success:function(data){
-			$('.hidbox').html(data);
 			$('.listmark').html(data);
-			if($('.hidbox .orderlist_box').length>0){
+			$('.hidbox').html(data);
+			//去除已接订单
+			$('.nocheck').find('.remove').remove();
+			$('.hidbox').find('.remove').remove();
+			
+			if($('.hidbox .orderlist_box').length>0&&(getQueryString('position')!=='order_check')){
 				$('.orderwarn_body p').text("有"+$('.hidbox .orderlist_box').length+"个新订单");
 				$('.orderwarn').animate({
 					bottom:'0px'
@@ -232,4 +236,13 @@ function goodsedit(method,$th){
 		return false;
 	}
 	
+}
+//取出地址栏get值
+function getQueryString(name) {
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
 }

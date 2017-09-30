@@ -98,24 +98,11 @@ switch ($p) {
 					<span class='col-xs-2'>时间</span>
 					<div class='clearfix'></div>
 				</div>
-				<div class='listmark'></div>			
+				<div class='listmark nocheck'></div>			
 			</div>
 			<div class='nothing hidden'>
 				<span>没有未处理的订单</span>		
 			</div>	
-		</div>	
-		<div class='order_checked'>
-			<div class='rightbox_title'><span>已处理订单</span></div>
-			<div class='rightbox_body'>
-				<div class='orderlist_title'>
-					<span class='col-xs-3'>菜品</span>
-					<span class='col-xs-2'>用户名</span>
-					<span class='col-xs-2'>电话</span>
-					<span class='col-xs-3'>地址</span>
-					<span class='col-xs-2'>时间</span>
-					<div class='clearfix'></div>
-				</div>	
-			</div>
 		</div>	
 	</div>
 
@@ -136,6 +123,7 @@ switch ($p) {
 						<span class='col-xs-2'>时间</span>
 						<div class='clearfix'></div>
 					</div>
+					<div class='listmark'></div>
 				</div>
 			</div>
 		</div>
@@ -275,6 +263,7 @@ function detailselect($shop_class,$cll){
 	}
 	return $detail_class_str;
 }
+//菜单生成
 function goodsbox($mysqli,$shop_class){
 	$goodsbox_str="";
 	foreach ($shop_class as $cl) {

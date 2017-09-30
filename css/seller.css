@@ -300,3 +300,7 @@ display: inline-block;
 	height: 80px;
 	width: 80px;
 }
+.listmark .col-xs-3{
+	white-space: nowrap;
+	overflow: hidden;
+}

@@ -1,5 +1,7 @@
 $(document).ready(function(){
+	
 	var addinfo;
+	min_check();
 	
 	$('.o_add:first').addClass('add_chose');
 	addinfo=info();
@@ -8,19 +10,24 @@ $(document).ready(function(){
 		if(words==''){
 			words='无';
 		}
-		$.ajax({
-			url:"controller/ordersubmit.php",
-			type:'post',
-			data:{
-				addinfo:JSON.stringify(addinfo),
-				words:words
-			},
-			datatype:'json',
-			success:function(){
-				alert("下单完成");
-				window.location.href='usercenter.php?position=allorder';
+		if(check()){
+			if(confirm('是否下单？')){
+					$.ajax({
+						url:"controller/ordersubmit.php",
+						type:'post',
+						data:{
+							addinfo:JSON.stringify(addinfo),
+							words:words
+						},
+						datatype:'json',
+						success:function(){
+							alert("下单完成");
+							window.location.href='usercenter.php?position=allorder';
+						}
+					});
+				
 			}
-		});
+		}
 		
 	});
 	$('.o_add').click(function(){
@@ -54,6 +61,7 @@ $(document).ready(function(){
 		numchange($th);
 		goods_sum($th);
 		sum();
+		min_check();
 
 	});
 	$(".plus").click(function(){
@@ -64,6 +72,7 @@ $(document).ready(function(){
 		numchange($th);
 		goods_sum($th);
 		sum();
+		min_check();
 	});
 });
 //收集信息
@@ -96,7 +105,7 @@ function goods_sum($th){
 function sum(){
 	var sum=0;
 	$('.goods_sum').each(function(){
-		sum=sum+($(this).html()-0);
+		sum=sum+($(this).html()-0)+($('.shopfee b').html()-0);
 	});
 	$('.o_submit .pull-right b').html(sum);
 }
@@ -111,4 +120,24 @@ function numchange($th){
 			num:a_num
 		}
 	});
+}
+function check(){
+	if($('.order_list').length<=0){
+		alert('购物车里没东西了！');
+		return false;
+	}else{
+		return true;
+	}
+}
+//检测是否
+function min_check(){
+
+	var min_price=($(".min_price b").html()-0);
+	var sum=($(".sum b").html()-0);
+	var shopfee=($('.shopfee b').html()-0);
+	if(min_price>(sum-shopfee)){
+		$('.OR').attr('disabled',true);
+	}else{
+		$('.OR').attr('disabled',false);
+	}
 }
