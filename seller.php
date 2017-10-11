@@ -198,10 +198,43 @@ switch ($p) {
 		";
 		break;
 	case 'comment':
+	function comment_li($mysqli,$SID){
+		$od_sql="SELECT * FROM `od` WHERE `SID`='".$SID."' AND `comment_star`!=0";
+		$od_result=mysqli_query($mysqli,$od_sql);
+		$st="";
+		while($od_row=mysqli_fetch_array($od_result)){
+			$user_sql="SELECT `userName` FROM `user` WHERE `UID`='".$od_row['UID']."'";
+			$uesr_result=mysqli_query($mysqli,$user_sql);
+			$name_row=mysqli_fetch_array($uesr_result);
+			$st=$st."<li>
+				<div class='comment_box clearfix'>
+					<div class='user_img'>
+						<img src='img/user/".$od_row['UID'].".png' alt=''>
+					</div>
+					<div class='comment_main'>
+						<p><span>用户名:".$name_row['userName']."</span> <span>评分:".$od_row['comment_star']."/5</span></p>
+						<span>评论:</span>
+						<p class='comment_text'>".$od_row['comment_text']."</p>
+						
+					</div>
+					<span class='comment_time'>".$od_row['comment_time']."</span>	
+				</div>
+			</li>";
+		}
+		return $st;
+	}
+	$li_st=comment_li($mysqli,$_SESSION['sid']);
 	echo "
 		<div class='seller_body_left col-xs-10 right'>
 			<div class='comment'>
 				<div class='rightbox_title'><span>评价</span></div>
+				<div class='rightbox_body'>
+					<div class='comment_ul'>
+						<ul>
+							".$li_st."
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 		";
@@ -315,6 +348,38 @@ function goodsbox($mysqli,$shop_class){
 	return $goodsbox_str;
 }
 	 ?>	
+
+<div class="footer">
+	<div class="footer-left">
+		<div class="footerLink">
+			<p>用户帮助</p>
+			<a href="">服务中心</a>
+			<a href="">常见问题</a>
+		</div>
+		<div class="footerLink">
+			<p>商务合作</p>
+			<a href="">我要开店</a>
+			<a href="">加盟指南</a>
+			<a href="">市场合作</a>
+			<a href="">开放平台</a>
+		</div>
+		<div class="footerLink">
+			<p>关于我们</p>
+			<a href="">还饿吗介绍</a>
+			<a href="">加入我们</a>
+			<a href="">联系我们</a>
+			<a href="">规则中心</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="footerPhone">
+		<div><p>24小时客服热线 : 666-6666</p></div>
+		<div><p>意见反馈 : 123@qq.com</p></div>
+		<div><p>关注我们 : 123456</p></div>
+	</div>
+	<div class="clear"></div>
+</div>
 <script src="js/seller.js" type="text/javascript"></script>
 </body>
 </html>

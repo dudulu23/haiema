@@ -2,6 +2,12 @@
 a:hover,a:focus{
 	text-decoration: none;
 }
+ul{
+	padding: 0;
+}
+ul li{
+	list-style-type:none;
+}
 .left{
 	float: left;
 }
@@ -303,4 +309,77 @@ display: inline-block;
 .listmark .col-xs-3{
 	white-space: nowrap;
 	overflow: hidden;
+}
+.footer{
+	width:1000px;
+	margin-left: 250px;
+}
+.footer-left{
+	border-right:1px solid #ccc;
+	margin-top: 50px;
+	width: 452px;
+	float: left;
+}
+.footerLink{
+	width:100px;
+	float:left;
+	margin-right: 50px;
+
+}
+.footerLink p{
+	line-height: 30px;
+}
+.footerLink a{
+	display:block;
+	width: 80px;
+	font-size:12px;
+	line-height: 24px;
+	color: #aaa;
+}
+.footerPhone{
+	width: 300px;
+	float: left;
+	margin-top: 50px;
+	margin-left: 200px;
+}
+.footerPhone p{
+	line-height: 30px;
+}
+.comment_ul{
+	width: 1000px;
+	margin: auto;
+}
+.comment_ul li{
+	border-bottom: 1px solid #eee;
+}
+.comment_ul li:nth-last-child(1){
+	border:none;
+}
+.comment_box{
+	padding: 15px;
+	color: #aaa;
+}
+.comment_text{
+	max-width: 600px;
+	word-break:break-all;
+}
+.user_img{
+	height: 80px;
+	width: 80px;
+	float: left;
+}
+.user_img img{
+	border-radius: 50%;
+	height: 80px;
+	width: 80px;
+}
+.comment_box .comment_main{
+	margin-left: 20px;
+	float: left;
+
+
+
+}
+.comment_box .comment_time{
+	float: right;
 }

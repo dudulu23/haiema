@@ -97,25 +97,7 @@
 			</form>
 		</div>
 	</div>
-	<div class="classify">
-		<span>商家分类:</span>
-		<div>
-			<span><a href="">全部商家</a></span>
-			<span><a href="">美食</a></span>
-			<span><a href="">美食</a></span>
-			<span><a href="">美食</a></span>
-			<span><a href="">美食</a></span>
-			<span><a href="">美食</a></span>
-			<span><a href="">特色菜系</a></span>
-			<span><a href="">特色菜系</a></span>
-			<span><a href="">特色菜系</a></span>
-			<span><a href="">特色菜系</a></span>
-			<span><a href="">特色菜系</a></span>
-			<span><a href="">特色菜系</a></span>
-			<div class="clear"></div>
-		</div>
-		<div class="clear"></div>
-	</div>
+	
 	<div class="shop">
 	<?php
 		function shopBox($row,$mysqli){
