@@ -59,7 +59,7 @@
 	<div class="headerBay center">
 		
 		<div class="topBay-left"> 
-			<a class="harbtn" href="index.php"><div class="logo"></div></a>
+			<a class="harbtn LOGO" href="index.php"><div class="logo">还饿吗     </div></a>
 			<a  class="harbtn" id="index" href="index.php">首页</a>
 			<a class="harbtn" href="usercenter.php?position=allorder">我的订单</a>
 			<a class="harbtn" href="sellerlogin.php">加盟合作</a>

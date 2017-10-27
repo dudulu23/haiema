@@ -38,7 +38,7 @@ if($row_user['img']==''){
 		<div class="headerBay center">
 		
 		<div class="topBay-left"> 
-			<a class="harbtn" href="index.php"><div class="logo"></div></a>
+			<a class="harbtn LOGO" href="index.php"><div class="logo">还饿吗     </div></a>
 			<a  class="harbtn" id="index" href="index.php">首页</a>
 			<a class="harbtn" href="usercenter.php?position=allorder">我的订单</a>
 			<a class="harbtn" href="sellerlogin.php">加盟合作</a>
@@ -171,7 +171,6 @@ if($row_user['img']==''){
 				</div>
 				<div class='col-xs-12'>
 					<button class='cf btn btn-info'>确定</button>
-					<button class='urge btn btn-info'>催单</button>
 					<button class='btn btn-warning'>退单</button>
 					<button class='btn btn-success' disabled='true' >确认收货</button>
 					<button class='com btn btn-info' disabled='true'>评论订单</button>
